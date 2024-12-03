@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Outfit", "sans-serif"], // Ajout de la police Outfit
+        sand: ["Quicksand", "sans-serif"],
       },
       colors: {
         black: "rgb(80 80 80 / 1)",
