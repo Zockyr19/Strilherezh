@@ -6,6 +6,888 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
     <title>Strilherezh</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body class="bg-gray-100 font-sans">
+    <!-- Navbar supérieure -->
+    <header
+      class="w-full h-[75px] max-sm:h-[50px] bg-white flex justify-between items-center px-10 relative max-md:px-5"
+    >
+      <div>
+        <button class="flex items-center">
+          <p>Menu</p>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="absolute left-1/2 transform -translate-x-1/2">
+        <a href="/"></a>
+      </div>
+      <!-- Compte et Panier -->
+      <div class="flex">
+        <button href="#" class="flex items-center mr-[30px] max-sm:mr-[22px]">
+          <p
+            class="font-extralight tracking-wider max-sm:hidden text-[16px] text-black"
+          >
+            Compte
+          </p>
+        </button>
+        <button class="flex items-center">
+          <p
+            class="text-[16px] font-extralight tracking-wider max-sm:hidden text-black"
+          >
+            Panier
+          </p>
+        </button>
+      </div>
+    </header>
+
+    <!-- Navbar inférieure (fixed) -->
+    <div
+      class="h-[60px] bg-gold flex justify-between px-10 items-center max-sm:h-[50px] max-md:px-5 sticky top-0 z-20"
+    >
+      <div></div>
+
+      <div class="flex gap-6 items-center max-sm:gap-3 max-xs:gap-2">
+        <a
+          href="#"
+          class="group text-white transition-all duration-300 ease-in-out"
+        >
+          <p
+            class="text-[16px] font-extralight max-sm:text-[14px] bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out text-white font-sans"
+          >
+            Tous nos produits
+          </p></a
+        >
+        <a
+          href="history.html"
+          class="group text-white transition-all duration-300 ease-in-out"
+        >
+          <p
+            class="text-[16px] font-extralight max-sm:hidden bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out text-white font-outfit"
+          >
+            Notre histoire
+          </p></a
+        >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="14"
+          viewBox="0 0 18 14"
+          fill="none"
+          class="hidden max-sm:block"
+        >
+          <path d="M0 1H14" stroke="white" stroke-width="1.5"></path>
+          <path d="M0 7H14" stroke="white" stroke-width="1.5"></path>
+          <path d="M0 13H14" stroke="white" stroke-width="1.5"></path>
+          <path d="M16 1H17.5" stroke="white" stroke-width="1.5"></path>
+          <path d="M16 7H17.5" stroke="white" stroke-width="1.5"></path>
+          <path d="M16 13H17.5" stroke="white" stroke-width="1.5"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Section Hero -->
+    <section
+      class="relative w-full h-[700px] max-xl:h-[600px] max-lg:h-[580px] max-md:h-[500px] max-sm:h-[400px] max-sx:h-[400px]"
+    >
+      <img
+        src="https://www.strilherezh.com/_next/image?url=%2Fimg%2Falcool-breton-bg.png&w=1920&q=75"
+        alt="bg-accueil"
+        class="w-full h-full object-cover brightness-50"
+        style="
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          color: transparent;
+        "
+      />
+      <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <h2
+          class="font-outfit font-light text-[40px] tracking-widest text-center max-sm:text-[25px] leading-5 text-gold"
+        >
+          STRILHEREZH
+        </h2>
+        <h1
+          class="font-outfit font-light text-[80px] tracking-widest text-center max-sm:text-[50px] text-white"
+        >
+          L'ALCOOL BRETON
+        </h1>
+        <p
+          class="text-[18px] text-center max-sm:text-[12px] font-normal text-white font-quicksand"
+        >
+          L'Essence de la Bretagne en Chaque Goutte.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section Nos maisons -->
+
+    <div
+      class="w-full h-[180px] bg-[#F4F4F4] flex flex-col justify-center items-center max-xl:h-[140px] max-lg:h-[140px] max-md:h-[140px] max-sm:h-[105px] max-sx:h-[105px]"
+    >
+      <h2
+        class="font-outfit text-[40px] tracking-widest font-normal max-sm:text-[20px] text-black"
+      >
+        Nos maisons
+      </h2>
+      <p
+        class="text-[17px] tracking-normal font-normal text-gray max-sm:text-[12px] font-quicksand"
+      >
+        Découvrez nos différents produits
+      </p>
+    </div>
+    <!-- Cartes -->
+    <div
+      class="w-full h-[700px] grid grid-cols-4 grid-rows-1 gap-0 max-xl:h-[650px] max-lg:h-[550px] max-k:h-[920px] max-sm:h-[1000px] max-k:grid-cols-1 max-k:grid-rows-4 max-xs:h-[800px]"
+    >
+      <!-- Carte 1 -->
+      <div class="relative flex flex-col category-card">
+        <img
+          src="https://www.strilherezh.com/_next/image?url=%2Fimg%2Fwhiskeys-placeholder.png&w=1920&q=75"
+          alt="Whiskys"
+          class="w-full h-full object-cover contrast-125"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+        <div class="absolute inset-0 flex justify-end">
+          <div
+            class="flex justify-center items-center h-[40px] mt-5 mr-10 gap-3 arrow-container animate opacity-0"
+          >
+            <p class="text-[16px] font-medium text-white font-outfit">
+              Tout découvrir
+            </p>
+            <button
+              type="button"
+              class="h-[30px] w-[30px] !bg-[#ffffff9f] text-white rounded-full bg-white animate font-bold"
+              ➔
+            ></button>
+          </div>
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col justify-end px-[15px] py-[25px] z-10 text-container animate"
+        >
+          <h3
+            class="font-outfit font-normal tracking-widest text-[35px] pb-1 contrast-200 max-sm:text-[30px] text-white"
+          >
+            Nos whiskys
+          </h3>
+
+          <p
+            class="text-[16px] my-0 font-light text-white max-sm:text-[12px] text-black font-quicksand"
+          >
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+      </div>
+
+      <!-- Carte 2 -->
+      <div class="relative flex flex-col category-card">
+        <img
+          src="https://www.strilherezh.com/_next/image?url=%2Fimg%2Fcidres-placeholder.png&w=1920&q=75"
+          alt="Whiskys"
+          class="w-full h-full object-cover contrast-125"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+        <div class="absolute inset-0 flex justify-end">
+          <div
+            class="flex justify-center items-center h-[40px] mt-5 mr-10 gap-3 arrow-container animate opacity-0"
+          >
+            <p class="text-[16px] font-medium text-white font-outfit">
+              Tout découvrir
+            </p>
+            <button
+              type="button"
+              class="h-[30px] w-[30px] !bg-[#ffffff9f] text-white rounded-full bg-white animate font-bold"
+            ></button>
+          </div>
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col justify-end px-[15px] py-[25px] z-10 text-container animate"
+        >
+          <h3
+            class="font-outfit font-normal tracking-widest text-[35px] pb-1 contrast-200 max-sm:text-[30px] text-white"
+          >
+            Nos cidres
+          </h3>
+
+          <p
+            class="text-[16px] my-0 font-light text-white max-sm:text-[12px] text-black font-quicksand"
+          >
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+      </div>
+
+      <!-- Carte 3 -->
+      <div class="relative flex flex-col category-card">
+        <img
+          src="https://www.strilherezh.com/_next/image?url=%2Fimg%2Fwine-placeholder.png&w=1920&q=75"
+          alt="vins"
+          class="w-full h-full object-cover contrast-125"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+        <div class="absolute inset-0 flex justify-end">
+          <div
+            class="flex justify-center items-center h-[40px] mt-5 mr-10 gap-3 arrow-container animate opacity-0"
+          >
+            <p class="text-[16px] font-medium text-white font-outfit">
+              Tout découvrir
+            </p>
+            <button
+              type="button"
+              class="h-[30px] w-[30px] !bg-[#ffffff9f] text-white rounded-full bg-white animate font-bold"
+            ></button>
+          </div>
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col justify-end px-[15px] py-[25px] z-10 text-container animate"
+        >
+          <h3
+            class="font-outfit font-normal tracking-widest text-[35px] pb-1 contrast-200 max-sm:text-[30px] text-white"
+          >
+            Nos vins
+          </h3>
+
+          <p
+            class="text-[16px] my-0 font-light text-white max-sm:text-[12px] text-black font-quicksand"
+          >
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+      </div>
+
+      <!-- Carte 4 -->
+      <div class="relative flex flex-col category-card">
+        <img
+          src="https://www.strilherezh.com/_next/image?url=%2Fimg%2Fexclus-placeholder.png&w=1920&q=75"
+          alt="Exclus"
+          class="w-full h-full object-cover contrast-125"
+          style="
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+          "
+        />
+        <div class="absolute inset-0 flex justify-end">
+          <div
+            class="flex justify-center items-center h-[40px] mt-5 mr-10 gap-3 arrow-container animate opacity-0"
+          >
+            <p class="text-[16px] font-medium text-white font-outfit">
+              Tout découvrir
+            </p>
+            <button
+              type="button"
+              class="h-[30px] w-[30px] !bg-[#ffffff9f] text-white rounded-full bg-white animate font-bold"
+            ></button>
+          </div>
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col justify-end px-[15px] py-[25px] z-10 text-container animate"
+        >
+          <h3
+            class="font-outfit font-normal tracking-widest text-[35px] pb-1 contrast-200 max-sm:text-[30px] text-white"
+          >
+            Nos exclus
+          </h3>
+
+          <p
+            class="text-[16px] my-0 font-light text-white max-sm:text-[12px] text-black font-quicksand"
+          >
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Menu -->
+
+    <section class="bg-white py-12">
+      <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Titre -->
+        <h2
+          class="text-[30px] text-center mt-[50px] mb-[80px] max-xl:mt-[80px] max-xl:mb-[60px] max-sm:my-[40px] text-black font-sand"
+        >
+          Nouveautés
+        </h2>
+
+        <!-- Grille des produits -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        >
+          <!-- Carte produit -->
+          <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+            <div class="relative">
+              <img
+                src="https://www.strilherezh.com/_next/image?url=%2Fimg%2Fcidre-template.png&w=1920&q=75"
+                alt="Cidre breton parfumé à la poire"
+                class="w-full h-auto rounded-lg"
+              />
+              <!-- Bouton Favori -->
+              <button
+                class="absolute top-3 right-3 text-gray-400 hover:text-red-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="text-gray-800 text-sm font-medium">
+                Cidre breton parfumé à la poire
+              </h3>
+              <p class="text-gray-600 text-sm mt-1">2.50€</p>
+            </div>
+          </div>
+
+          <!-- Produit 2 -->
+          <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+            <div class="relative">
+              <img
+                src="https://www.strilherezh.com/_next/image?url=%2Fimg%2Fcidre-template.png&w=1920&q=75"
+                alt="Cidre breton parfumé à la poire"
+                class="w-full h-auto rounded-lg"
+              />
+              <button
+                class="absolute top-3 right-3 text-gray-400 hover:text-red-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="text-gray-800 text-sm font-medium">
+                Cidre breton parfumé à la poire
+              </h3>
+              <p class="text-gray-600 text-sm mt-1">2.50€</p>
+            </div>
+          </div>
+
+          <!-- Produit 3 -->
+
+          <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+            <div class="relative">
+              <img
+                src="https://www.strilherezh.com/_next/image?url=%2Fimg%2Fcidre-template.png&w=1920&q=75"
+                alt="Cidre breton parfumé à la poire"
+                class="w-full h-auto rounded-lg"
+              />
+              <button
+                class="absolute top-3 right-3 text-gray-400 hover:text-red-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="text-gray-800 text-sm font-medium">
+                Cidre breton parfumé à la poire
+              </h3>
+              <p class="text-gray-600 text-sm mt-1">2.50€</p>
+            </div>
+          </div>
+
+          <!-- Produit 4 -->
+
+          <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+            <div class="relative">
+              <img
+                src="https://www.strilherezh.com/_next/image?url=%2Fimg%2Fcidre-template.png&w=1920&q=75"
+                alt="Cidre breton parfumé à la poire"
+                class="w-full h-auto rounded-lg"
+              />
+              <button
+                class="absolute top-3 right-3 text-gray-400 hover:text-red-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="text-gray-800 text-sm font-medium">
+                Cidre breton parfumé à la poire
+              </h3>
+              <p class="text-gray-600 text-sm mt-1">2.50€</p>
+            </div>
+          </div>
+
+          <!-- Continuez pour plus de produits -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="w-full border-t-2 border-t-gold">
+      <!-- Logo and Title -->
+      <div class="text-center">
+        <div class="my-[100px] flex justify-center items-center">
+          <img src="logo.svg" alt="Logo" class="h-12 w-12 mb-4" />
+
+          <h2 class="text-yellow-600 text-5xl font-extralight uppercase">
+            Strilherezh
+          </h2>
+          <p class="text-yellow-600 text-xl text-gray-600">
+            Distillerie bretonne
+          </p>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div
+        class="flex justify-around mb-[115px] max-md:grid max-md:grid-cols-3 max-md:grid-rows-2 max-md:gap-y-[55px] max-md:px-[40px] max-sm:px-[60px] max-sm:flex max-sm:flex-col"
+      >
+        <!-- Section 1 -->
+        <div
+          class="max-md:pl-[40px] max-sm:pl-0 border-[#text-[#E3E3E3] max-sm:border-t"
+        >
+          <div
+            class="max-sm:flex max-sm:flex-col max-sm:items-center justify-center max-sm:py-[40px]"
+          >
+            <p
+              class="text-[20px] mb-[20px] font-medium tracking-[1px] group text-gold transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+              >
+                Strilherezh</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Notre histoire</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Tous nos produits</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div
+          class="max-md:pl-[40px] max-sm:pl-0 border-[#text-[#E3E3E3] max-sm:border-t"
+        >
+          <div
+            class="max-sm:flex max-sm:flex-col max-sm:items-center justify-center max-sm:py-[40px]"
+          >
+            <p
+              class="text-[20px] mb-[20px] font-medium tracking-[1px] group text-gold transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+              >
+                Skornenn</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Histoire de Skornenn</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Cidres natures</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Cidres de feu</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Cidres de glace</a
+              >
+            </p>
+          </div>
+        </div>
+        <!-- Section 3 -->
+        <div
+          class="max-md:pl-[40px] max-sm:pl-0 border-[#text-[#E3E3E3] max-sm:border-t"
+        >
+          <div
+            class="max-sm:flex max-sm:flex-col max-sm:items-center justify-center max-sm:py-[40px]"
+          >
+            <p
+              class="text-[20px] mb-[20px] font-medium tracking-[1px] group text-gold transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+              >
+                Vins</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Histoire de "Vins"</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Vins rouges</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Vins blancs</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Vins rosés</a
+              >
+            </p>
+          </div>
+        </div>
+        <!-- Section 4 -->
+        <div
+          class="max-md:pl-[40px] max-sm:pl-0 border-[#text-[#E3E3E3] max-sm:border-t"
+        >
+          <div
+            class="max-sm:flex max-sm:flex-col max-sm:items-center justify-center max-sm:py-[40px]"
+          >
+            <p
+              class="text-[20px] mb-[20px] font-medium tracking-[1px] group text-gold transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+              >
+                Whiskys</a
+              >
+            </p>
+
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Histoire de "Whisky"</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Catégorie 1</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Catégorie 2</a
+              >
+            </p>
+          </div>
+        </div>
+        <!-- Section 5 -->
+        <div
+          class="max-md:pl-[40px] max-sm:pl-0 border-[#text-[#E3E3E3] max-sm:border-t"
+        >
+          <div
+            class="max-sm:flex max-sm:flex-col max-sm:items-center justify-center max-sm:py-[40px]"
+          >
+            <p
+              class="text-[20px] mb-[20px] font-medium tracking-[1px] group text-gold transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gold to-gold bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+              >
+                Exclusivités</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Catégorie 1</a
+              >
+            </p>
+            <p
+              class="text-[16px] font-extralight tracking-[0.8px] mb-[10px] group text-gray transition-all duration-300 ease-in-out font-outfit"
+            >
+              <a
+                href="#"
+                class="bg-left-bottom bg-gradient-to-r from-gray to-gray bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >Catégorie 2</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <p
+        class="text-[16px] text-center font-light tracking-[0.7px] mb-[20px] text-gray font-quicksand"
+      >
+        ©Skornenn 2024 - STRILHEREZH, France
+      </p>
+      <div
+        class="border-t border-t-gold flex justify-between px-[50px] max-md:px-[25px] max-sm:px-[0px] py-[20px] max-sm:flex-col-reverse max-sm:bg-[#F4F4F4]"
+      >
+        <div
+          class="flex items-center gap-[25px] max-md:gap-[5px] max-sm:justify-center max-xs:grid max-xs:grid-cols-2 max-xs:grid-rows-3"
+        >
+          <p
+            class="text-[16px] font-extralight tracking-[0.8px] group transition-all duration-300 ease-in-out max-md:text-[14px] max-xs:text-end text-gray font-quicksand"
+          >
+            <a href="#">CGU</a>
+          </p>
+          <p
+            class="text-[16px] font-extralight tracking-[0.8px] group transition-all duration-300 ease-in-out max-md:text-[14px] max-xs:text-end text-gray font-quicksand"
+          >
+            <a href="#">CGV</a>
+          </p>
+          <p
+            class="text-[16px] font-extralight tracking-[0.8px] group transition-all duration-300 ease-in-out max-md:text-[14px] max-xs:text-end text-gray font-quicksand"
+          >
+            <a href="#">Politique de confidentialité</a>
+          </p>
+          <p
+            class="text-[16px] font-extralight tracking-[0.8px] group transition-all duration-300 ease-in-out max-md:text-[14px] max-xs:text-end text-gray font-quicksand"
+          >
+            <a href="#">Mentions légales</a>
+          </p>
+        </div>
+        <div
+          class="flex justify-end gap-[15px] max-md:gap-[7px] max-sm:justify-center max-sm:gap-[15px] max-sm:mb-[15px]"
+        >
+          <!-- Instagram -->
+          <a href="#">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="group"
+            >
+              <rect
+                x="0.5"
+                y="0.5"
+                width="29"
+                height="29"
+                rx="14.5"
+                class="stroke-[#AAAAAA] group-hover:stroke-gold"
+              ></rect>
+              <g clip-path="url(#clip0_486_437)">
+                <path
+                  d="M19.2 8H11.2C10.3513 8 9.53737 8.33714 8.93726 8.93726C8.33714 9.53737 8 10.3513 8 11.2V19.2C8 20.0487 8.33714 20.8626 8.93726 21.4627C9.53737 22.0629 10.3513 22.4 11.2 22.4H19.2C20.0487 22.4 20.8626 22.0629 21.4627 21.4627C22.0629 20.8626 22.4 20.0487 22.4 19.2V11.2C22.4 10.3513 22.0629 9.53737 21.4627 8.93726C20.8626 8.33714 20.0487 8 19.2 8Z"
+                  class="stroke-[#AAAAAA] group-hover:stroke-gold"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M15.2 18.4C16.0487 18.4 16.8626 18.0629 17.4627 17.4627C18.0629 16.8626 18.4 16.0487 18.4 15.2C18.4 14.3513 18.0629 13.5374 17.4627 12.9373C16.8626 12.3371 16.0487 12 15.2 12C14.3513 12 13.5374 12.3371 12.9373 12.9373C12.3371 13.5374 12 14.3513 12 15.2C12 16.0487 12.3371 16.8626 12.9373 17.4627C13.5374 18.0629 14.3513 18.4 15.2 18.4Z"
+                  class="stroke-[#AAAAAA] group-hover:stroke-gold"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M19.5994 11.6C19.8116 11.6 20.0151 11.5157 20.1651 11.3657C20.3152 11.2157 20.3994 11.0122 20.3994 10.8C20.3994 10.5878 20.3152 10.3843 20.1651 10.2343C20.0151 10.0843 19.8116 10 19.5994 10C19.3873 10 19.1838 10.0843 19.0338 10.2343C18.8837 10.3843 18.7994 10.5878 18.7994 10.8C18.7994 11.0122 18.8837 11.2157 19.0338 11.3657C19.1838 11.5157 19.3873 11.6 19.5994 11.6Z"
+                  fill="#AAAAAA"
+                ></path>
+              </g>
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+
+          <a href="#">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="group"
+            >
+              <rect
+                x="0.5"
+                y="0.5"
+                width="29"
+                height="29"
+                rx="14.5"
+                class="stroke-[#AAAAAA] group-hover:stroke-gold"
+              ></rect>
+              <path
+                d="M14.0809 9.13032L14.0808 9.13038C13.4635 9.74759 13.1166 10.5847 13.1165 11.4577C13.1165 11.4577 13.1165 11.4577 13.1165 11.4577V12.866V13.366H12.6165H11.2082C11.2027 13.366 11.1973 13.3671 11.1922 13.3692C11.1872 13.3713 11.1826 13.3744 11.1787 13.3782L10.8259 13.0254L11.1787 13.3782C11.1748 13.3821 11.1718 13.3867 11.1697 13.3917C11.1676 13.3968 11.1665 13.4022 11.1665 13.4077V16.0077C11.1665 16.0187 11.1709 16.0293 11.1787 16.0371C11.1865 16.045 11.1971 16.0493 11.2082 16.0493H12.6165H13.1165V16.5493V21.2077C13.1165 21.2187 13.1209 21.2293 13.1287 21.2371C13.1365 21.245 13.1471 21.2493 13.1582 21.2493H15.7582C15.7692 21.2493 15.7798 21.245 15.7876 21.2371C15.7954 21.2293 15.7998 21.2187 15.7998 21.2077V16.5493V16.0493H16.2998H17.7082H17.7085C17.7177 16.0494 17.7268 16.0463 17.7341 16.0405C17.7414 16.0348 17.7466 16.0268 17.7489 16.0179L14.0809 9.13032ZM14.0809 9.13032C14.6981 8.513 15.5352 8.16613 16.4082 8.16602C16.4082 8.16602 16.4082 8.16602 16.4082 8.16602H18.3582C18.3692 8.16602 18.3798 8.17041 18.3876 8.17822L18.7412 7.82467M14.0809 9.13032L18.7412 7.82467M18.7412 7.82467L18.3876 8.17822C18.3954 8.18603 18.3998 8.19663 18.3998 8.20768V10.8077C18.3998 10.8187 18.3954 10.8293 18.3876 10.8371L18.7412 11.1907L18.3876 10.8371C18.3798 10.845 18.3692 10.8493 18.3582 10.8493H16.4082C16.3283 10.8493 16.2492 10.8651 16.1754 10.8957C16.1016 10.9262 16.0345 10.971 15.978 11.0275L15.978 11.0275C15.9215 11.084 15.8767 11.1511 15.8461 11.2249L18.7412 7.82467ZM18.3989 13.4179L17.7489 16.0178L15.8461 11.2249C15.8156 11.2987 15.7998 11.3778 15.7998 11.4577V12.866V13.366H16.2998H18.3582H18.3584C18.3648 13.366 18.371 13.3675 18.3767 13.3702C18.3824 13.373 18.3874 13.377 18.3913 13.382C18.3952 13.387 18.3979 13.3928 18.3992 13.399C18.4005 13.4052 18.4004 13.4116 18.3989 13.4178L18.3989 13.4179Z"
+                class="stroke-[#AAAAAA] group-hover:stroke-gold"
+              ></path>
+            </svg>
+          </a>
+
+          <!-- Twitter -->
+
+          <a href="#">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="group"
+            >
+              <rect
+                x="0.5"
+                y="0.5"
+                width="29"
+                height="29"
+                rx="14.5"
+                class="stroke-[#AAAAAA] group-hover:stroke-gold"
+              ></rect>
+              <path
+                d="M9 21L14.032 15.968M14.032 15.968L9 9H12.3333L15.968 14.032M14.032 15.968L17.6667 21H21L15.968 14.032M21 9L15.968 14.032"
+                class="stroke-[#AAAAAA] group-hover:stroke-gold"
+              ></path>
+            </svg>
+          </a>
+
+          <!-- Linkedin -->
+
+          <a href="#">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="group"
+            >
+              <rect
+                x="0.5"
+                y="0.5"
+                width="29"
+                height="29"
+                rx="14.5"
+                class="stroke-[#AAAAAA] group-hover:stroke-gold"
+              ></rect>
+              <path
+                d="M17.6668 12.3359C18.7277 12.3359 19.7451 12.7574 20.4953 13.5075C21.2454 14.2577 21.6668 15.2751 21.6668 16.3359V21.0026H19.0002V16.3359C19.0002 15.9823 18.8597 15.6432 18.6096 15.3931C18.3596 15.1431 18.0205 15.0026 17.6668 15.0026C17.3132 15.0026 16.9741 15.1431 16.724 15.3931C16.474 15.6432 16.3335 15.9823 16.3335 16.3359V21.0026H13.6668V16.3359C13.6668 15.2751 14.0883 14.2577 14.8384 13.5075C15.5885 12.7574 16.606 12.3359 17.6668 12.3359ZM8.3335 13.0026H11.0002V21.0026H8.3335V13.0026Z"
+                class="stroke-[#AAAAAA] group-hover:stroke-gold"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M9.66683 11.0026C10.4032 11.0026 11.0002 10.4057 11.0002 9.66927C11.0002 8.93289 10.4032 8.33594 9.66683 8.33594C8.93045 8.33594 8.3335 8.93289 8.3335 9.66927C8.3335 10.4057 8.93045 11.0026 9.66683 11.0026Z"
+                class="stroke-[#AAAAAA] group-hover:stroke-gold"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
