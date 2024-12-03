@@ -10,3 +10,12 @@
   z-index: 1;
   pointer-events: none;
 }
+
+.heart svg path {
+  fill: #505050;
+}
+
+/* Style actif (rouge) */
+.heart.active svg path {
+  fill: red;
+}
